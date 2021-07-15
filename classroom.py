@@ -7,7 +7,7 @@ class Classroom:
         self.service = get_service()
         self.reload_course_id()
 
-    def list_anc(self, name, size=1):
+    def list_anc(self, name, size=2):
         self.service = get_service()
         # self.reload_course_id()
         anc = self.service.courses().announcements().list(courseId=self.courses_id[name], pageSize=size).execute()
@@ -21,7 +21,7 @@ class Classroom:
         courses = courses.get('courses', [])
         return courses
 
-    def list_hw(self, name, size=1):
+    def list_hw(self, name, size=2):
         self.service = get_service()
         # self.reload_course_id()
         hw = self.service.courses().courseWork().list(courseId=self.courses_id[name], pageSize=size).execute()
