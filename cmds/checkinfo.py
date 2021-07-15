@@ -4,8 +4,7 @@ from classroom import Classroom
 from core.classes import CogExtension
 
 
-class Checkinfo(CogExtension):
-
+class Checkinfo(CogExtension, discord.Client):
     @commands.command()
     async def listcourses(self, ctx):
         embed = discord.Embed(title="所有課程", color=0x00f900)

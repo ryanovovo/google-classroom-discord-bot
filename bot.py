@@ -6,7 +6,6 @@ import json
 with open("setting.json", "r", encoding="utf8") as jfile:
     setting = json.load(jfile)
 
-
 bot = commands.Bot(command_prefix='/')
 
 
