@@ -1,4 +1,4 @@
-from classroomCore import get_service
+from auth import get_service
 
 
 class Classroom:
