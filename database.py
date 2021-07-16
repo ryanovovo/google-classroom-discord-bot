@@ -17,14 +17,18 @@ class DbQueue:
         return text_id in self.db
 
     def save_data(self):
-        with open("is_send.csv", "w") as csvfile:
+        with open("history_msg_id.csv", "w") as csvfile:
             writer = csv.writer(csvfile)
             writer.writerow(list(self.db))
 
     def load_data(self):
-        if os.path.exists("is_send.csv"):
-            with open("is_send.csv", "r") as csvfile:
+        if os.path.exists("history_msg_id.csv"):
+            with open("history_msg_id.csv", "r") as csvfile:
                 ids = csv.reader(csvfile)
                 for text_ids in ids:
                     for text_id in text_ids:
                         self.db.append(text_id)
+
+    def delete_data(self):
+        if os.path.exists("history_msg_id.csv"):
+            os.remove("history_msg_id.csv")

@@ -13,7 +13,6 @@ class CogExtension(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.cls = Classroom()
-        self.is_send = DbQueue()
-        self.is_send.load_data()
+        self.history_msg_id = DbQueue()
         self.anc_ch = int(setting['anc_channel'])
         self.hw_ch = int(setting['hw_channel'])
