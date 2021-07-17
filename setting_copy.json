@@ -1,0 +1,6 @@
+{
+  "TOKEN": "YOUR_DISCORD_BOT_TOKEN",
+  "anc_channel": "ANNOUNCEMENT_CHANNEL_ID",
+  "hw_channel": "HOMEWORK_CHANNEL_ID",
+  "cmd_channel": "COMMAND_LINE_CHANNEL_ID"
+}
